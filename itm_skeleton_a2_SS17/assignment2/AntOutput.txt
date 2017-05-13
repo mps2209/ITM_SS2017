@@ -1,0 +1,194 @@
+
+    ITM build file
+	
+Main targets:
+
+ AudioMetadataGenerator   test the audio metadata generator. Example: ant.bat AudioMetadataGenerator -Dinput=media/audio/ -Doutput=test/
+ AudioPlayer              play an audio file. Example: ant.bat AudioPlayer -Dinput=media/audio/mySong.mp3
+ AudioThumbGenerator      test the audio thumbnail generator. Example: ant.bat AudioThumbGenerator -Dinput=media/audio/ -Doutput=test/ -Dlength=10
+ ImageHistogramGenerator  test the ImageHistogramGenerator: example: ant.bat ImageHistogramGenerator -Dinput=media/img/ -Doutput=test/ -Dbins=256
+ ImageMetadataGenerator   test the ImageMetadataGenerator: example: ant.bat ImageMetadataGenerator -Dinput=media/img/ -Doutput=test/
+ ImageThumbnailGenerator  test the ImageThumbnailGenerator: example: ant.bat ImageThumbnailGenerator -Dinput=media/img/ -Doutput=test/ -Drotation=90
+ VideoFrameGrabber        test the video thumbnail generator. Example: ant.bat VideoFrameGrabber -Dinput=media/video/ -Doutput=test/
+ VideoMetadataGenerator   test the video metadata generator. Example: ant.bat VideoMetadataGenerator -Dinput=media/video/ -Doutput=test/
+ VideoThumbnailGenerator  test the video thumb generator. Example: ant.bat VideoThumbnailGenerator -Dinput=media/video/panda.avi -Doutput=test/
+ build                    Build the webapp
+ clean                    complete clean up
+ clean-build              clean build directories
+ clean-thumbs             clean all generated thumbnails and metadata
+ compile                  compile the source
+ javadoc                  creates the javadoc
+Default target: build
+
+clean-thumbs:
+     [echo] Deleting thumbnail directory H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\thumbnails and H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\webapps\itm\media\md if existing
+
+clean-build:
+     [echo] Deleting build directory H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\build and H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\webapps\itm\WEB-INF\classes if existing
+
+clean:
+
+init:
+    [mkdir] Created dir: H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\build
+
+compile:
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\build.xml:45: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\build
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:16: error: package javax.media does not exist
+    [javac] import javax.media.ControllerEvent;
+    [javac]                   ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:17: error: package javax.media does not exist
+    [javac] import javax.media.ControllerListener;
+    [javac]                   ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:18: error: package javax.media does not exist
+    [javac] import javax.media.Manager;
+    [javac]                   ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:19: error: package javax.media does not exist
+    [javac] import javax.media.Processor;
+    [javac]                   ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:20: error: package javax.media.control does not exist
+    [javac] import javax.media.control.TrackControl;
+    [javac]                           ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:21: error: package javax.media.format does not exist
+    [javac] import javax.media.format.AudioFormat;
+    [javac]                          ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:22: error: package javax.media.format does not exist
+    [javac] import javax.media.format.VideoFormat;
+    [javac]                          ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:23: error: package javax.media.protocol does not exist
+    [javac] import javax.media.protocol.DataSource;
+    [javac]                            ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:25: error: package com.xuggle.xuggler does not exist
+    [javac] import com.xuggle.xuggler.IContainer;
+    [javac]                          ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:26: error: package com.xuggle.xuggler does not exist
+    [javac] import com.xuggle.xuggler.IStream;
+    [javac]                          ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:27: error: package com.xuggle.xuggler does not exist
+    [javac] import com.xuggle.xuggler.IStreamCoder;
+    [javac]                          ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:28: error: package com.xuggle.xuggler.ICodec does not exist
+    [javac] import com.xuggle.xuggler.ICodec.Type;
+    [javac]                                 ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\image\ImageThumbnailGenerator.java:54: error: method processImage in class ImageThumbnailGenerator cannot be applied to given types;
+    [javac]                     File result = processImage( f, output, overwrite );
+    [javac]                                   ^
+    [javac]   required: File,File,double,boolean
+    [javac]   found: File,File,boolean
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\image\ImageThumbnailGenerator.java:63: error: method processImage in class ImageThumbnailGenerator cannot be applied to given types;
+    [javac]                 File result = processImage( input, output, overwrite );
+    [javac]                               ^
+    [javac]   required: File,File,double,boolean
+    [javac]   found: File,File,boolean
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\model\MediaFactory.java:125: error: method batchProcessImages in class ImageThumbnailGenerator cannot be applied to given types;
+    [javac]         itg.batchProcessImages(imageDir, metadataDir, 90, false);
+    [javac]            ^
+    [javac]   required: File,File,boolean
+    [javac]   found: File,File,int,boolean
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] 15 errors
+
+BUILD FAILED
+
+H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\build.xml:45: Compile failed; see the compiler error output for details.
+	at org.apache.tools.ant.taskdefs.Javac.compile(Javac.java:1416)
+	at org.apache.tools.ant.taskdefs.Javac.execute(Javac.java:1121)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:293)
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:435)
+	at org.apache.tools.ant.Target.performTasks(Target.java:456)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1405)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1376)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1260)
+	at org.apache.tools.ant.Main.runBuild(Main.java:857)
+	at org.apache.tools.ant.Main.startAnt(Main.java:236)
+	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:287)
+	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:113)
+
+clean-thumbs:
+     [echo] Deleting thumbnail directory H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\thumbnails and H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\webapps\itm\media\md if existing
+
+clean-build:
+     [echo] Deleting build directory H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\build and H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\webapps\itm\WEB-INF\classes if existing
+   [delete] Deleting directory H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\build
+
+clean:
+
+init:
+    [mkdir] Created dir: H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\build
+
+compile:
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\build.xml:45: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 18 source files to H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\build
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:16: error: package javax.media does not exist
+    [javac] import javax.media.ControllerEvent;
+    [javac]                   ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:17: error: package javax.media does not exist
+    [javac] import javax.media.ControllerListener;
+    [javac]                   ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:18: error: package javax.media does not exist
+    [javac] import javax.media.Manager;
+    [javac]                   ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:19: error: package javax.media does not exist
+    [javac] import javax.media.Processor;
+    [javac]                   ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:20: error: package javax.media.control does not exist
+    [javac] import javax.media.control.TrackControl;
+    [javac]                           ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:21: error: package javax.media.format does not exist
+    [javac] import javax.media.format.AudioFormat;
+    [javac]                          ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:22: error: package javax.media.format does not exist
+    [javac] import javax.media.format.VideoFormat;
+    [javac]                          ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:23: error: package javax.media.protocol does not exist
+    [javac] import javax.media.protocol.DataSource;
+    [javac]                            ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:25: error: package com.xuggle.xuggler does not exist
+    [javac] import com.xuggle.xuggler.IContainer;
+    [javac]                          ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:26: error: package com.xuggle.xuggler does not exist
+    [javac] import com.xuggle.xuggler.IStream;
+    [javac]                          ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:27: error: package com.xuggle.xuggler does not exist
+    [javac] import com.xuggle.xuggler.IStreamCoder;
+    [javac]                          ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\video\VideoMetadataGenerator.java:28: error: package com.xuggle.xuggler.ICodec does not exist
+    [javac] import com.xuggle.xuggler.ICodec.Type;
+    [javac]                                 ^
+    [javac] H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\java\itm\model\MediaFactory.java:125: error: method batchProcessImages in class ImageThumbnailGenerator cannot be applied to given types;
+    [javac]         itg.batchProcessImages(imageDir, metadataDir, 90, false);
+    [javac]            ^
+    [javac]   required: File,File,boolean
+    [javac]   found: File,File,int,boolean
+    [javac]   reason: actual and formal argument lists differ in length
+    [javac] 13 errors
+
+BUILD FAILED
+
+H:\Uni\ITM2017\itm_skeleton_a2_SS17\assignment2\build.xml:45: Compile failed; see the compiler error output for details.
+	at org.apache.tools.ant.taskdefs.Javac.compile(Javac.java:1416)
+	at org.apache.tools.ant.taskdefs.Javac.execute(Javac.java:1121)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:293)
+	at sun.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:435)
+	at org.apache.tools.ant.Target.performTasks(Target.java:456)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1405)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1376)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1260)
+	at org.apache.tools.ant.Main.runBuild(Main.java:857)
+	at org.apache.tools.ant.Main.startAnt(Main.java:236)
+	at org.apache.tools.ant.launch.Launcher.run(Launcher.java:287)
+	at org.apache.tools.ant.launch.Launcher.main(Launcher.java:113)
