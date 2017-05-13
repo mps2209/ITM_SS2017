@@ -18,7 +18,7 @@ import javax.imageio.ImageWriter;
 import javax.imageio.stream.ImageOutputStream;
 
 
-//added Project to git 13.05.17
+//added Project to git 13.05.17 test
 /**
     This class converts images into various image formats (BMP, PNG, ...).
     It can be called with 3 parameters, an input filename/directory, an output directory and a target format.
